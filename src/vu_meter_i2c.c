@@ -50,7 +50,10 @@ void vu_meter_i2c_init(vu_meter_i2c_t *meter,
   meter->peak_indicator.sprite.visible = false;
 }
 
-
+/**
+ * @param needle_level Range [0-255]. Corresponding to min/max needle angle
+ * @param peak_level
+ */
 void vu_meter_i2c_update(vu_meter_i2c_t *meter, uint16_t needle_level, uint16_t peak_level)
 {
   #if INCLUDE_CALIBRATION
